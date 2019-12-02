@@ -3,5 +3,5 @@ import 'package:firstapp/ui_practice_1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: ContactUi()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
 }
