@@ -1,3 +1,4 @@
+import 'package:firstapp/ui_practice_1.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -6,36 +7,40 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int number = 0;
+  Widget image = Container();
+  Image image_asset = Image.asset(
+    'assets/image_1.jpg',
+    fit: BoxFit.fitHeight,
+  );
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: Drawer(
+        child: ContactUi(),
+      ),
       appBar: AppBar(),
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          /// for integer
-          Text('$number'),
-
-          ///for increment and decrement buttons
-
-          //for decrement button
-          MaterialButton(
-            color: Colors.blue,
-            child: Text('-'),
-            onPressed: () {
-              setState(() {
-                number--;
-              });
-            },
+          ///for image portion on top of screen
+          Container(
+            color: Colors.grey[400],
+            height: screenHeight,
+            width: screenWidth,
+            child: image,
           ),
 
-          ///for increment button
+          ///for add button to show image
           MaterialButton(
-            color: Colors.red,
-            child: Text('+'),
+            color: Colors.amber,
+            child: Text(
+              'Add',
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
             onPressed: () {
               setState(() {
-                number++;
+                image = image_asset;
               });
             },
           )
