@@ -8,5 +8,5 @@ void main() {
     statusBarColor: Colors.teal,
     systemNavigationBarColor: Colors.teal
   ));
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home(),));
 }

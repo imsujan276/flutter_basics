@@ -31,9 +31,11 @@ class _ContactUiState extends State<ContactUi> {
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text('All'),
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         actions: <Widget>[
           ///for search button

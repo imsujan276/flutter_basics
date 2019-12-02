@@ -1,4 +1,5 @@
 import 'package:firstapp/ui_practice_1.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -35,13 +36,14 @@ class _HomeState extends State<Home> {
           MaterialButton(
             color: Colors.amber,
             child: Text(
-              'Add',
+              'Goto Contact',
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onPressed: () {
-              setState(() {
-                image = image_asset;
-              });
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return ContactUi();
+              }));
             },
           )
         ],
