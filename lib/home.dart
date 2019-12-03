@@ -21,7 +21,9 @@ class _HomeState extends State<Home> {
       drawer: Drawer(
         child: ContactUi(),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: TextField(),
+      ),
       body: ListView(
         children: <Widget>[
           ///for image portion on top of screen
@@ -40,10 +42,7 @@ class _HomeState extends State<Home> {
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return ContactUi();
-              }));
+              Navigator.of(context).pushNamed('/contacts');
             },
           )
         ],
