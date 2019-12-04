@@ -1,5 +1,6 @@
 import 'package:firstapp/home.dart';
 import 'package:firstapp/settings/settings.dart';
+import 'package:firstapp/text_field.dart';
 import 'package:firstapp/ui_practice_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,7 +13,7 @@ void main() {
   ));
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Settings(),
+    home: SimpleForm(),
     routes: {'/contacts': (context) => ContactUi()},
   ));
 }

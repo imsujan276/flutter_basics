@@ -10,7 +10,6 @@ class _SimpleFormState extends State<SimpleForm> {
   TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(),
       body: Column(
@@ -22,6 +21,11 @@ class _SimpleFormState extends State<SimpleForm> {
           ///for textfield
           TextField(
             controller: _controller,
+            decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.grey[200],
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50))),
           ),
 
           ///for button
@@ -30,6 +34,7 @@ class _SimpleFormState extends State<SimpleForm> {
             onPressed: () {
               setState(() {
                 text = _controller.text;
+                _controller.clear();
               });
             },
             child: Text('Press to Display'),
