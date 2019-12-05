@@ -10,6 +10,8 @@ class _FacebookState extends State<Facebook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         //for messenger icon
         actions: <Widget>[
@@ -23,7 +25,12 @@ class _FacebookState extends State<Facebook> {
           size: 120,
         ),
       ),
-      body: NewsFeedCard(),
+      body: ListView(
+        children: <Widget>[
+          NewsFeedCard('Jenny Cruise'),
+          NewsFeedCard('Emma Clark')
+        ],
+      ),
     );
   }
 
