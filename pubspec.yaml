@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  video_player: ^0.10.4+1
   flutter:
     sdk: flutter
 
@@ -46,6 +47,7 @@ flutter:
    - assets/facebook_logo.png
    - assets/messenger.png
    - assets/search.png
+   - assets/sample_video.mp4
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
